@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Flickr Storm</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap-theme.min.css" integrity="sha384-6pzBo3FDv/PJ8r2KRkGHifhEocL+1X2rVCTTkUfGk7/0pbek5mMa1upzvWbrUbOZ" crossorigin="anonymous">
+</head>
+<style>
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+        max-width: 70%;
+        max-height: 345px;
+        height: 345px;
+        margin: auto;
+    }
+    .right.carousel-control{
+        display: none;
+    }
+    .left.carousel-control {
+        display: none;
+    }
+    .sidenav {
+        width: 165px;
+        position: fixed;
+        z-index: 1;
+        top: 20px;
+        left: 10px;
+        background: #eee;
+        overflow-x: hidden;
+        padding: 8px 8px;
+        text-align: center;
+    }
+
+    .sidenav button {
+        padding: 6px 8px 6px 16px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #2196F3;
+        display: block;
+        width: 135px;
+        margin: 5px;
+    }
+
+    .sidenav button:hover {
+        color: #064579;
+    }
+
+    .main {
+        margin-left: 140px; /* Same width as the sidebar + left position in px */
+        font-size: 28px; /* Increased text to enable scrolling */
+        padding: 0px 10px;
+    }
+
+    @media screen and (max-height: 450px) {
+        .sidenav {padding-top: 15px;}
+        .sidenav button {font-size: 18px;}
+    }
+</style>
+<body>
+    <div class="sidenav">
+        <button id="Today">Today(1)</button>
+        <button id="Earlier">Earlier(3)</button>
+        <button id="Gallery">Gallery(5)</button>
+        <button id="GoBack">Back(2)</button>
+        <button id="Rotate">Rotate(9)</button>
+        <button id="Stop">Stop(7)</button>
+    </div>
+    <div class="container">
+        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+    
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox" id="carousel-inner"></div>
+    
+            <!-- Left and right controls -->
+            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+    
+        </div>
+    <script type="text/javascript" src="flickr.js"></script>
+</body>
+</html>
